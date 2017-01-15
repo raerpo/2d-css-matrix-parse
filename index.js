@@ -1,7 +1,6 @@
 class CSSTranslateMatrixParser {
 
     constructor() {
-        super();
         this._initRegexs();
     }
 

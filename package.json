@@ -1,6 +1,6 @@
 {
   "name": "css-translate-matrix-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Let's you get the matrix value from a element CSS translate property. This is an ES6 fork of Iran Reyes's 2d-css-matrix-parse",
   "main": "index.js",
   "scripts": {
