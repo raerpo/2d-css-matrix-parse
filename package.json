@@ -1,38 +1,23 @@
 {
-  "name": "2d-css-matrix-parse",
-  "version": "1.0.0",
-  "description": "Module that parse a 2D css transform matrix into a 3x3 array. Also the module allow you get the matrix array from a specified element",
+  "name": "css-translate-matrix-parser",
+  "version": "1.0.1",
+  "description": "Let's you get the matrix value from a element CSS translate property. This is an ES6 fork of Iran Reyes's 2d-css-matrix-parse",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": ""
   },
   "keywords": [
-    "animations",
-    "2d",
-    "matrix",
-    "matrix2d",
-    "3x3",
-    "parse",
-    "css-parse",
-    "transformation",
-    "transform",
-    "scale",
-    "translate"
+    "css parse",
+    "getComputedProperty"
   ],
-  "author": "Iran Reyes <iranreyesfleitas@gmail.com> (http://www.iranreyes.com)",
+  "author": "Rafael Poveda <raerpo@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "get-style-property": "^0.1.1"
   },
   "devDependencies": {
-    "tape": "^4.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/iranreyes/2d-css-matrix-parse.git"
-  },
-  "homepage": "https://github.com/iranreyes/2d-css-matrix-parse",
-  "bugs": {
-    "url": "https://github.com/iranreyes/2d-css-matrix-parse/issues"
+    "url": "https://github.com/raerpo/css-translate-matrix-parser"
   }
 }

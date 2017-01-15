@@ -1,6 +1,7 @@
-The MIT License (MIT) Copyright (c) 2015 Iran Reyes
+The MIT License (MIT) Copyright (c) 2017 Rafael Poveda
 
-
+Copyright for portions of project 2d-css-matrix-parse are held by Iran Reyes, 2015 
+as part of project css-translate-matrix-parser. All other copyright for project css-translate-matrix-parser are held by Rafael Poveda, 2017.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

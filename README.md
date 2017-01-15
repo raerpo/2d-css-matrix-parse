@@ -1,53 +1,22 @@
-# 2d-css-matrix-parse
+# css-translate-matrix-parser
 
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+Let's you get the matrix value from a element CSS translate property.
 
-Converts css transform matrix to an 2D array of 6 values(3x3 matrix).
+This is an ES6 port from [iranreyes's 2d-css-matrix-parse](https://github.com/iranreyes/2d-css-matrix-parse). I also remove it's dependency from [get-style-property](https://www.npmjs.com/package/get-style-property) by using `window.getComputedStyle` function.  
 
-### Function parse
+## Install
 
-The `parse` function takes a matrix string representation like `matrix(1.1, 0, 0, 1.1, 0, 0)` and parse it to an array of floats.
-
-```js
-var matrixTransform = require('./index.js');
-
-var matrix = "matrix(1.1, 0, 0, 1.1, 0, 0)";
-
-matrixTransform.parse(matrix);
-// -> [1.1, 0, 0, 1.1, 0, 0]
+```bash
+npm install --save css-translate-matrix-parser
 ```
-
-### Function fromElement
-
-The `fromElement` function tries to help you to get the transform string matrix representation and let you pass instead of the string the HTML element itself.
-
-```js
-var matrixTransform = require('./index.js');
-
-var element = document.createElement('div');
-element.style.transform = "scale(1.5)";
-document.body.appendChild(element);
-
-matrixTransform.fromElement(element);
-// -> [1.5,0,0,1.5,0,0]
-```
-
-**Important Note:**
-
-Doesn't matter if the transform is not formatted as a matrix, in the above example we are setting to `element` the value `scale` instead of the current matrix.
 
 ## Usage
+```javascript
+import CSSParser from 'css-translate-matrix-parser';
+// You can user css-translate-matrix-parser by passing it the element
+let matrixValues = CSSParser.fromElement(document.querySelector('#element'));
 
-[![NPM](https://nodei.co/npm/2d-css-matrix-parse.png)](https://www.npmjs.com/package/2d-css-matrix-parse)
-
-#### `matrixTransform.parse(string)`
-
-It takes a string matrix representation and gives you an array.
-
-#### `matrixTransform.fromElement(HtmlElement)`
-
-It takes an Html Element and gives you an array with the element transformation.
-
-## License
-
-MIT, see [LICENSE.md](http://github.com/iranreyes/2d-css-matrix-parse/blob/master/LICENSE.md) for details.
+// Or by passing the transform value
+const styles = window.getComputedStyle(document.querySelector('#element'));
+let matrixValues = CSSParser.parse(styles.transform);
+```
